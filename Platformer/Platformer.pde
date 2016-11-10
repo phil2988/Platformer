@@ -15,7 +15,7 @@ void setup() {
 
 void draw() {
 
-  println(b1.collision, p.inAir);
+  //println(b1.collision, p.inAir);
 
   background(10, 100, 100);
 

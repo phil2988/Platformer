@@ -19,9 +19,13 @@ class box {
 
     if (collision) {
       if(p.x <= x + d && p.y >= y - p.d && p.y <= y + d){
+        println("left");
         p.x = x - p.d;
       }
+    }
+    if(collision){
       if(p.x >= x - d && p.y >= y - p.d && p.y <= y + d){
+        println("right");
         p.x = x + p.d;
       }
     }
