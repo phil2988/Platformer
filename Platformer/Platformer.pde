@@ -1,5 +1,5 @@
 player p = new player(300, 600, 50);
-platform b1 = new platform(500, 600, 580, 600);
+platform b = new platform(500, 600, 580, 600);
 
 //ground variables
 float groundx = 0;
@@ -27,6 +27,6 @@ void draw() {
   p.movement();
   p.physics();
 
-  b1.display();
+  b.display();
  
 }

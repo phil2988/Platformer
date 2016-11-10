@@ -3,7 +3,7 @@ float jumpPower = 8;
 class player {
 
   float x, y, d, gravity = 0.2, gravityAccel = 0, horAccel = 0, accel;
-  boolean inAir = true, isOnGround = false, canJumpAgain = true, canMoveAgain = true;
+  boolean inAir = true, isOnGround = false, canJumpAgain = true, canMoveAgain = true, fall = true;
 
   player(float x_, float y_, float d_) {
     x = x_;
@@ -23,7 +23,9 @@ class player {
     //Physics fror when player is in the air
     if (inAir) {
       canJumpAgain = false;
+      if (fall) {
       gravityAccel -= gravity;
+      }
       y -= gravityAccel;
       isOnGround = false;
     }
