@@ -18,6 +18,9 @@ class box {
     } else collision = false;
 
     if (collision) {
+      if(p.x <= x + d && p.y >= y - p.d && p.y <= y + d){
+        p.x = x - p.d;
+      }
     }
   }
 }
