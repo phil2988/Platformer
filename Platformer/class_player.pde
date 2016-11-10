@@ -1,4 +1,4 @@
-float jumpPower = 8;
+float jumpPower = 9;
 
 class player {
 

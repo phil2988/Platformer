@@ -1,5 +1,7 @@
-player p = new player(300, 600, 50);
-platform b = new platform(500, 600, 580, 600);
+player p = new player(50, 700, 50);
+platform b = new platform(500, 400, 580, 400);
+platform b2 = new platform(300, 500, 380, 500);
+platform b3 = new platform(100, 600, 180, 600);
 
 //ground variables
 float groundx = 0;
@@ -14,7 +16,7 @@ void setup() {
 }
 
 void draw() {
-
+  println(b.detect, b.under, b2.detect, b2.under, b3.detect, b3.under);
   //println(b1.collision, p.inAir);
 
   background(10, 100, 100);
@@ -28,5 +30,7 @@ void draw() {
   p.physics();
 
   b.display();
+  b2.display();
+  b3.display();
  
 }

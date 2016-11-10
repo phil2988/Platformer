@@ -1,7 +1,7 @@
 void keyPressed () {
   if (key == 'w') {
     if (p.canJumpAgain) {
-      p.gravityAccel = 7;
+      p.gravityAccel = jumpPower;
       p.inAir = true;
       p.canJumpAgain = false;
     }
