@@ -21,6 +21,9 @@ class box {
       if(p.x <= x + d && p.y >= y - p.d && p.y <= y + d){
         p.x = x - p.d;
       }
+      if(p.x >= x - d && p.y >= y - p.d && p.y <= y + d){
+        p.x = x + p.d;
+      }
     }
   }
 }

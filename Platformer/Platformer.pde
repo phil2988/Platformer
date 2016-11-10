@@ -1,7 +1,5 @@
 player p = new player(300, 600, 50);
 box b1 = new box(500, 580, 50);
-box b2 = new box(600, 500, 50);
-box b3 = new box(700, 420, 50);
 
 //ground variables
 float groundx = 0;
@@ -30,6 +28,5 @@ void draw() {
   p.physics();
 
   b1.display();
-  b2.display();
-  b3.display();
+ 
 }
