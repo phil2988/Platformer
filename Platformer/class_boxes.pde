@@ -1,33 +1,19 @@
-class box {
+class platform {
 
-  float x, y, d;
-  boolean collision = false;
-  box(float x_, float y_, float d_) {
+  float x, y, y2, x2;
+  boolean leftCollision = false, rightCollision = false;
+  platform(float x_, float y_, float x2_, float y2_) {
     x = x_;
     y = y_;
-    d = d_;
+    x2 = x2_;
+    y2 = y2_;
   }
 
   void display() {
 
-    rect(x, y, d, d);
+    line(x, y, x2, y2);
 
     //player collision
-    if (p.x >= x - p.d && p.x <= x + d && p.y >= y - p.d && p.y <= y + d) {
-      collision = true;
-    } else collision = false;
-
-    if (collision) {
-      if(p.x <= x + d && p.y >= y - p.d && p.y <= y + d){
-        println("left");
-        p.x = x - p.d;
-      }
-    }
-    if(collision){
-      if(p.x >= x - d && p.y >= y - p.d && p.y <= y + d){
-        println("right");
-        p.x = x + p.d;
-      }
-    }
+    
   }
 }

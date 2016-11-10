@@ -1,5 +1,5 @@
 player p = new player(300, 600, 50);
-box b1 = new box(500, 580, 50);
+platform b1 = new platform(500, 600, 580, 600);
 
 //ground variables
 float groundx = 0;
