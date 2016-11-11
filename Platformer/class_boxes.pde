@@ -15,10 +15,14 @@ class platform {
 
     //player collision
     if (p.x >= x - p.d && p.x <= x2 && p.y < y){
+      
       //problem line under here
       if (p.y >= y - p.d){
-        if (under <= 5){
-        detect = true;
+       
+        
+        if (under >= 0){
+           detect = true;
+        
         p.y -= under;
         p.gravityAccel = 0;
         p.canJumpAgain = true;
