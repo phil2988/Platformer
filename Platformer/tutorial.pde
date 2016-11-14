@@ -1,17 +1,31 @@
 void tutorial(){
-  
+  pushStyle();
   //Tutorial for level 1
   if(level == 1){
-    pushStyle();
+    
     textAlign(CENTER);
     textSize(15);
-    text("Move by using the A and D keys", 150, 450);
-    text("Jump by pressing the w key", 150, 480);
-    text("Catch this square to proceed in levels", 1000, 150);
+    text("Move by using the A and D keys", (pl.x + pl.x2)/2, pl.y - 150);
+    text("Jump by pressing the w key", (pl.x + pl.x2)/2, pl.y - 120);
     
     if (p.x >= 300){
-      text("if you hit the ground, you die", 440, 300);
+      text("if you hit the ground, you die", (pl2.x + pl2.x2)/2, pl2.y - 150);
     }
-    popStyle();
+    
+    if (p.x >= 700){
+      text("Catch this square to proceed in levels", (c.x + c.d/2), c.y - 120);
+    }
+    
   }
+  if (level == 2){
+    textAlign(CENTER);
+    text("if you hit a platform from the bottom", (pl.x + pl.x2)/2, pl.y - 150);
+    text("You can stil get onto it", (pl.x + pl.x2)/2, pl.y - 120);
+    
+    if (p.x >= 300){
+      text("Platforms can also vary in size", (pl3.x + pl3.x2)/2, pl3.y - 150);
+    }
+    
+  }
+  popStyle();
 }

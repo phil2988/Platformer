@@ -33,7 +33,7 @@ void draw() {
 
   //println(p.x, p.y);
 
-  background(10, 100, 100);
+  background(20, 65, 400);
 
   //draws the ground in the world
   line(groundx, groundy, groundx2, groundy2);
@@ -81,7 +81,7 @@ void level2() {
   p.gravityAccel = 0;
   pl.x = 100;
   pl.y = 600;
-  pl.x2 = 180;
+  pl.x2 = 250;
   pl2.x = 180;
   pl2.y = 400;
   pl2.x2 = 260;

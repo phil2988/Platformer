@@ -12,7 +12,10 @@ class player {
   }
 
   void display() {
+    pushStyle();
+    fill(190, 55, 55);
     rect(x, y, d, d);
+    popStyle();
   }  
 
   void physics() {
