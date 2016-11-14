@@ -3,7 +3,7 @@ float jumpPower = 9;
 class player {
 
   float x, y, d, gravity = 0.2, gravityAccel = 0, horAccel = 0, accel, deathTime = 180;
-  boolean inAir = true, isOnGround = false, canJumpAgain = true, canMoveAgain = true, fall = true, death = false;
+  boolean inAir = true, isOnGround = false, canJumpAgain = true, canMoveAgain = true, fall = true, death = false, tutorial = true;
 
   player(float x_, float y_, float d_) {
     x = x_;
@@ -35,7 +35,7 @@ class player {
     }
 
     //Collision with ground
-    if (y + d >= groundy) {
+    if (y + d >= groundy +10) {
       gravityAccel = 0;
       y = groundy - d;
       canJumpAgain = true;
@@ -46,13 +46,14 @@ class player {
     }
   }
 
-
+  //Called when death = true
   void death() {
+    level = 0;
     deathTime -= 1;
     pushStyle();
     textAlign(CENTER);
     textSize(90);
-    text("Game Over", height/2, width/2);
+    text("Game Over", width/2, height/2);
     popStyle();
      p.x = 10000;
      p.y = -10000;
@@ -65,16 +66,24 @@ class player {
      pl3.x = 10000;
      pl3.y = 10000;
      pl3.x2 = 10000;
+     c.x = -10000;
+     c.y = 10000;
      groundx = -10000;
      groundy = 10000;
      groundx2 = -10000;
      groundy2 = 10000;
-
+     
+     //Called when 3 seconds has pa
      if (deathTime == 0){
        death = false;
        deathTime = 180;
        level1();
      }
+     
+     if(level == 1 || level == 2){
+       tutorial = true;
+     }
+     
   }
   
   

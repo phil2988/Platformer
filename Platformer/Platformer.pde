@@ -46,6 +46,10 @@ void draw() {
   pl2.display();
   pl3.display();
   c.display();
+  
+  if (p.tutorial){
+       tutorial();
+     }
 }
 
 void level1() {
@@ -62,6 +66,8 @@ void level1() {
   pl3.x = 700;
   pl3.y = 400;
   pl3.x2 = 780;
+  c.x = 1000;
+  c.y = 300;
   groundx = 0;
   groundy = 700;
   groundx2 = 1400;
@@ -76,10 +82,10 @@ void level2() {
   pl.x = 100;
   pl.y = 600;
   pl.x2 = 180;
-  pl2.x = 300;
-  pl2.y = 450;
-  pl2.x2 = 380;
-  pl3.x = 700;
+  pl2.x = 180;
+  pl2.y = 400;
+  pl2.x2 = 260;
+  pl3.x = 500;
   pl3.y = 400;
   pl3.x2 = 780;
   groundx = 0;
