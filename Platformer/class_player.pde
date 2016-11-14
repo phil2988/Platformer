@@ -49,6 +49,11 @@ class player {
 
   void death() {
     deathTime -= 1;
+    pushStyle();
+    textAlign(CENTER);
+    textSize(90);
+    text("Game Over", height/2, width/2);
+    popStyle();
      p.x = 10000;
      p.y = -10000;
      pl.x = 10000;

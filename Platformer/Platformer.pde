@@ -14,6 +14,7 @@ player p = new player(115, 600 - 50, 50);
 platform pl = new platform(pl_x, pl_y, pl_d);
 platform pl2 = new platform(pl2_x, pl2_y, pl2_d);
 platform pl3 = new platform(pl3_x, pl3_y, pl3_d);
+complete c = new complete(1000, 300, 50);
 
 //ground variables
 float groundx = 0;
@@ -22,8 +23,8 @@ float groundx2 = 1400;
 float groundy2 = 700;
 
 void setup() {
-  //fullScreen();
-  size(800, 800);
+  fullScreen();
+  //size(800, 800);
   color(HSB);
 }
 
@@ -44,9 +45,11 @@ void draw() {
   pl.display();
   pl2.display();
   pl3.display();
+  c.display();
 }
 
 void level1() {
+  level = 1;
   p.x = 115;
   p.y = 550;
   p.gravityAccel = 0;
@@ -66,15 +69,16 @@ void level1() {
 }
 
 void level2() {
+  level = 2;
   p.x = 115;
   p.y = 550;
   p.gravityAccel = 0;
   pl.x = 100;
   pl.y = 600;
   pl.x2 = 180;
-  pl2.x = 400;
-  pl2.y = 500;
-  pl2.x2 = 480;
+  pl2.x = 300;
+  pl2.y = 450;
+  pl2.x2 = 380;
   pl3.x = 700;
   pl3.y = 400;
   pl3.x2 = 780;
