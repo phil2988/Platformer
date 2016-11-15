@@ -1,4 +1,5 @@
 float jumpPower = 9;
+float moveSpeed = 3;
 
 class player {
 
@@ -38,7 +39,7 @@ class player {
     }
 
     //Collision with ground
-    if (y + d >= groundy +10) {
+    if (y + d > groundy + 5) {
       gravityAccel = 0;
       y = groundy - d;
       canJumpAgain = true;
@@ -61,14 +62,26 @@ class player {
      p.x = 10000;
      p.y = -10000;
      pl.x = 10000;
-     pl.y = 10000;
-     pl.x2 = 10000;
-     pl2.x = 10000;
-     pl2.y = 10000;
-     pl2.x2 = 10000;
-     pl3.x = 10000;
-     pl3.y = 10000;
-     pl3.x2 = 10000;
+     pl.y = 0;
+     pl.x2 = 0;
+     pl2.x = 0;
+     pl2.y = 0;
+     pl2.x2 = 0;
+     pl3.x = 0;
+     pl3.y = 0;
+     pl3.x2 = 0;
+     pl4.x = 0;
+     pl4.y = 0;
+     pl4.x2 = 0;
+     pl5.x = 0;
+     pl5.y = 0;
+     pl5.x2 = 0;
+     pl6.x = 0;
+     pl6.y = 0;
+     pl6.x2 = 0;
+     pl7.x = 0;
+     pl7.y = 0;
+     pl7.x2 = 0;
      c.x = -10000;
      c.y = 10000;
      groundx = -10000;

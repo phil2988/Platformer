@@ -8,12 +8,16 @@ float pl3_x = 700;
 float pl3_y = 400;
 float pl3_d = 780;
 
-int level = 1;
+int level = 3;
 
 player p = new player(115, 600 - 50, 50);
 platform pl = new platform(pl_x, pl_y, pl_d);
 platform pl2 = new platform(pl2_x, pl2_y, pl2_d);
 platform pl3 = new platform(pl3_x, pl3_y, pl3_d);
+platform pl4 = new platform(0, 0, 0);
+platform pl5 = new platform(0, 0, 0);
+platform pl6 = new platform(0, 0, 0);
+platform pl7 = new platform(0, 0, 0);
 complete c = new complete(1000, 300, 50);
 
 //ground variables
@@ -26,6 +30,16 @@ void setup() {
   fullScreen();
   //size(800, 800);
   color(HSB);
+  
+  if (level == 1){
+    level1();
+  }
+  else if (level == 2){
+    level2();
+  }
+  else if (level == 3){
+    level3();
+  }
 }
 
 void draw() {
@@ -45,51 +59,13 @@ void draw() {
   pl.display();
   pl2.display();
   pl3.display();
+  pl4.display();
+  pl5.display();
+  pl6.display();
+  pl7.display();
   c.display();
   
   if (p.tutorial){
        tutorial();
      }
-}
-
-void level1() {
-  level = 1;
-  p.x = 115;
-  p.y = 550;
-  p.gravityAccel = 0;
-  pl.x = 100;
-  pl.y = 600;
-  pl.x2 = 180;
-  pl2.x = 400;
-  pl2.y = 500;
-  pl2.x2 = 480;
-  pl3.x = 700;
-  pl3.y = 400;
-  pl3.x2 = 780;
-  c.x = 1000;
-  c.y = 300;
-  groundx = 0;
-  groundy = 700;
-  groundx2 = 1400;
-  groundy2 = 700;
-}
-
-void level2() {
-  level = 2;
-  p.x = 115;
-  p.y = 550;
-  p.gravityAccel = 0;
-  pl.x = 100;
-  pl.y = 600;
-  pl.x2 = 250;
-  pl2.x = 180;
-  pl2.y = 400;
-  pl2.x2 = 260;
-  pl3.x = 500;
-  pl3.y = 400;
-  pl3.x2 = 780;
-  groundx = 0;
-  groundy = 700;
-  groundx2 = 1400;
-  groundy2 = 700;
 }

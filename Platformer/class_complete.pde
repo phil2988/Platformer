@@ -9,7 +9,7 @@ class complete {
   }
   
   void display(){
-    println(p.y, c.y);
+    //println(p.y, c.y);
     pushStyle();
     fill(180, 150, 150);
     rect(x, y, d, d);
@@ -18,6 +18,9 @@ class complete {
     if(p.y >= y - p.d && p.y <= y + d && p.x >= x - p.d && p.x <= x + d){
       if (level == 1){
         level2();
+      }
+      else if (level == 2){
+        level3();
       }
     }
   }

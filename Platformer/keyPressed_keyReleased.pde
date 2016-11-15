@@ -8,11 +8,11 @@ void keyPressed () {
   }
   if (key == 'd') {
 
-    p.horAccel = 3;
+    p.horAccel = moveSpeed;
   }
   if (key == 'a') {
 
-    p.horAccel = -3;
+    p.horAccel = -moveSpeed;
   }
 }
 
