@@ -8,7 +8,7 @@ float pl3_x = 700;
 float pl3_y = 400;
 float pl3_d = 780;
 
-int level = 3;
+int level = 1;
 
 player p = new player(115, 600 - 50, 50);
 platform pl = new platform(pl_x, pl_y, pl_d);
