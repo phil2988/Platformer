@@ -89,7 +89,7 @@ class player {
      groundx2 = -10000;
      groundy2 = 10000;
      
-     //Called when 3 seconds has pa
+     //Called when 3 seconds has past
      if (deathTime == 0){
        death = false;
        deathTime = 180;

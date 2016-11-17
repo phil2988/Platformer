@@ -1,6 +1,7 @@
 void level1() {
+  jumpPower = 9;
   level = 1;
-  moveSpeed = 2;
+  moveSpeed = 3;
   p.gravity = 0.2;
   p.d= 50;
   p.x = 115;
@@ -24,6 +25,7 @@ void level1() {
 }
 
 void level2() {
+  jumpPower = 9;
   level = 2;
   p.x = 115;
   p.y = 550;
