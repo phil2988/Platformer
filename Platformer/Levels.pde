@@ -79,5 +79,4 @@ void level3(){
   groundy = 700;
   groundx2 = 1400;
   groundy2 = 700;
-  
 }

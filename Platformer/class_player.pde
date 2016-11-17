@@ -4,7 +4,7 @@ float moveSpeed = 3;
 class player {
 
   float x, y, d, gravity = 0.2, gravityAccel = 0, horAccel = 0, accel, deathTime = 180;
-  boolean inAir = true, isOnGround = false, canJumpAgain = true, canMoveAgain = true, fall = true, death = false, tutorial = true;
+  boolean inAir = true, isOnGround = false, canJumpAgain = true, canMoveAgain = true, fall = true, death = false, tutorial = true, win = false;
 
   player(float x_, float y_, float d_) {
     x = x_;
@@ -48,11 +48,14 @@ class player {
     if (death){
       death();
     }
+    if (win){
+      win();
+    }
   }
 
   //Called when death = true
   void death() {
-    level = 0;
+    level = 1;
     deathTime -= 1;
     pushStyle();
     textAlign(CENTER);
@@ -102,5 +105,41 @@ class player {
      
   }
   
-  
+  void win(){
+    level = 0;
+    pushStyle();
+    textAlign(CENTER);
+    textSize(90);
+    text("You Win!!!", width/2, height/2);
+    popStyle();
+     p.x = 10000;
+     p.y = -10000;
+     pl.x = 10000;
+     pl.y = 0;
+     pl.x2 = 0;
+     pl2.x = 0;
+     pl2.y = 0;
+     pl2.x2 = 0;
+     pl3.x = 0;
+     pl3.y = 0;
+     pl3.x2 = 0;
+     pl4.x = 0;
+     pl4.y = 0;
+     pl4.x2 = 0;
+     pl5.x = 0;
+     pl5.y = 0;
+     pl5.x2 = 0;
+     pl6.x = 0;
+     pl6.y = 0;
+     pl6.x2 = 0;
+     pl7.x = 0;
+     pl7.y = 0;
+     pl7.x2 = 0;
+     c.x = -10000;
+     c.y = 10000;
+     groundx = -10000;
+     groundy = 10000;
+     groundx2 = -10000;
+     groundy2 = 10000;
+  }
 }

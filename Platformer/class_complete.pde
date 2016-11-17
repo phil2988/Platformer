@@ -22,6 +22,9 @@ class complete {
       else if (level == 2){
         level3();
       }
+      else if (level == 3){
+        p.win = true;
+      }
     }
   }
   
