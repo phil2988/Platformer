@@ -20,28 +20,28 @@ class player {
   }  
 
   void physics() {
-
     //Moves player to the sides when buttons are pressed
     x += horAccel;
-    
-    if (p.x <= 0){
+
+    if (p.x <= 0) {
       p.x = 0;
     }
-    
-    if (horAccel < -0.5){
+
+    //makes a smooth reduction of movespeed
+    if (horAccel < -0.5) {
       horAccel += 0.6;
     }
-    if (horAccel > 0.5){
+    if (horAccel > 0.5) {
       horAccel -= 0.6;
     }
-    if (horAccel > -0.55 && horAccel < 0.55){
+    if (horAccel > -0.55 && horAccel < 0.55) {
       horAccel = 0;
     }
-    
-    if (aPress){
-     horAccel = -moveSpeed;
+
+    if (aPress) {
+      horAccel = -moveSpeed;
     }
-    if (dPress){
+    if (dPress) {
       horAccel = moveSpeed;
     }
 
@@ -49,7 +49,7 @@ class player {
     if (inAir) {
       canJumpAgain = false;
       if (fall) {
-      gravityAccel -= gravity;
+        gravityAccel -= gravity;
       }
       y -= gravityAccel;
       isOnGround = false;
@@ -66,10 +66,10 @@ class player {
       canJumpAgain = true;
       death = true;
     }
-    if (death){
+    if (death) {
       death();
     }
-    if (win){
+    if (win) {
       win();
     }
   }
@@ -83,84 +83,83 @@ class player {
     textSize(90);
     text("Game Over", width/2, height/2);
     popStyle();
-     p.x = 10000;
-     p.y = -10000;
-     pl.x = 10000;
-     pl.y = 0;
-     pl.x2 = 0;
-     pl2.x = 0;
-     pl2.y = 0;
-     pl2.x2 = 0;
-     pl3.x = 0;
-     pl3.y = 0;
-     pl3.x2 = 0;
-     pl4.x = 0;
-     pl4.y = 0;
-     pl4.x2 = 0;
-     pl5.x = 0;
-     pl5.y = 0;
-     pl5.x2 = 0;
-     pl6.x = 0;
-     pl6.y = 0;
-     pl6.x2 = 0;
-     pl7.x = 0;
-     pl7.y = 0;
-     pl7.x2 = 0;
-     c.x = -10000;
-     c.y = 10000;
-     groundx = -10000;
-     groundy = 10000;
-     groundx2 = -10000;
-     groundy2 = 10000;
-     
-     //Called when 3 seconds has past
-     if (deathTime == 0){
-       death = false;
-       deathTime = 180;
-       level1();
-     }
-     
-     if(level == 1 || level == 2){
-       tutorial = true;
-     }
-     
+    p.x = 10000;
+    p.y = -10000;
+    pl.x = 10000;
+    pl.y = 0;
+    pl.x2 = 0;
+    pl2.x = 0;
+    pl2.y = 0;
+    pl2.x2 = 0;
+    pl3.x = 0;
+    pl3.y = 0;
+    pl3.x2 = 0;
+    pl4.x = 0;
+    pl4.y = 0;
+    pl4.x2 = 0;
+    pl5.x = 0;
+    pl5.y = 0;
+    pl5.x2 = 0;
+    pl6.x = 0;
+    pl6.y = 0;
+    pl6.x2 = 0;
+    pl7.x = 0;
+    pl7.y = 0;
+    pl7.x2 = 0;
+    c.x = -10000;
+    c.y = 10000;
+    groundx = -10000;
+    groundy = 10000;
+    groundx2 = -10000;
+    groundy2 = 10000;
+
+    //Called when 3 seconds has past
+    if (deathTime == 0) {
+      death = false;
+      deathTime = 180;
+      level1();
+    }
+
+    if (level == 1 || level == 2) {
+      tutorial = true;
+    }
   }
-  
-  void win(){
+
+  void win() {
     level = 0;
     pushStyle();
     textAlign(CENTER);
     textSize(90);
     text("You Win!!!", width/2, height/2);
     popStyle();
-     p.x = 10000;
-     p.y = -10000;
-     pl.x = 10000;
-     pl.y = 0;
-     pl.x2 = 0;
-     pl2.x = 0;
-     pl2.y = 0;
-     pl2.x2 = 0;
-     pl3.x = 0;
-     pl3.y = 0;
-     pl3.x2 = 0;
-     pl4.x = 0;
-     pl4.y = 0;
-     pl4.x2 = 0;
-     pl5.x = 0;
-     pl5.y = 0;
-     pl5.x2 = 0;
-     pl6.x = 0;
-     pl6.y = 0;
-     pl6.x2 = 0;
-     pl7.x = 0;
-     pl7.y = 0;
-     pl7.x2 = 0;
-     c.x = -10000;
-     c.y = 10000;
-     groundx = -10000;
-     groundy = 10000;
-     groundx2 = -10000;
-     groundy2 = 10000;
+    p.x = 10000;
+    p.y = -10000;
+    pl.x = 10000;
+    pl.y = 0;
+    pl.x2 = 0;
+    pl2.x = 0;
+    pl2.y = 0;
+    pl2.x2 = 0;
+    pl3.x = 0;
+    pl3.y = 0;
+    pl3.x2 = 0;
+    pl4.x = 0;
+    pl4.y = 0;
+    pl4.x2 = 0;
+    pl5.x = 0;
+    pl5.y = 0;
+    pl5.x2 = 0;
+    pl6.x = 0;
+    pl6.y = 0;
+    pl6.x2 = 0;
+    pl7.x = 0;
+    pl7.y = 0;
+    pl7.x2 = 0;
+    c.x = -10000;
+    c.y = 10000;
+    groundx = -10000;
+    groundy = 10000;
+    groundx2 = -10000;
+    groundy2 = 10000;
   }
 }

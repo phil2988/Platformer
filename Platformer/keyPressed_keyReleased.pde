@@ -17,13 +17,12 @@ void keyPressed () {
   }
 }
 
-void keyReleased(){
-  
-if (key == 'd') {
+void keyReleased() {
+
+  if (key == 'd') {
     dPress = false;
   }
   if (key == 'a') {
     aPress = false;
   }
-
 }

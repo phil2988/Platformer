@@ -45,7 +45,7 @@ void level2() {
   groundy2 = 700;
 }
 
-void level3(){
+void level3() {
   p.d = 25;
   jumpPower = 5;
   moveSpeed = 1.5;
@@ -82,7 +82,7 @@ void level3(){
   groundy2 = 700;
 }
 
-void level4(){
+void level4() {
   p.d = 25;
   jumpPower = 7.5;
   moveSpeed = 9;

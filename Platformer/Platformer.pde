@@ -30,24 +30,21 @@ void setup() {
   fullScreen();
   //size(800, 800);
   color(HSB);
-  
-  if (level == 1){
+
+  if (level == 1) {
     level1();
-  }
-  else if (level == 2){
+  } else if (level == 2) {
     level2();
-  }
-  else if (level == 3){
+  } else if (level == 3) {
     level3();
-  }
-  else if (level == 4){
+  } else if (level == 4) {
     level4();
   }
 }
 
 void draw() {
 
-    println(p.horAccel);
+  println(p.horAccel);
   //println(p.x, p.y);
 
   background(20, 65, 400);
@@ -67,8 +64,8 @@ void draw() {
   pl6.display();
   pl7.display();
   c.display();
-  
-  if (p.tutorial){
-       tutorial();
-     }
+
+  if (p.tutorial) {
+    tutorial();
+  }
 }
