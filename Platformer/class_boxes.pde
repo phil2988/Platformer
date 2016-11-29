@@ -1,3 +1,5 @@
+
+
 class platform {
 
   float x, y, x2, under;

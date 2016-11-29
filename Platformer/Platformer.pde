@@ -1,3 +1,5 @@
+import ddf.minim.*;
+
 float pl_x = 100;
 float pl_y = 600;
 float pl_d = 180;
@@ -10,6 +12,10 @@ float pl3_d = 780;
 
 int level = 1;
 
+Minim minim;
+AudioPlayer player;
+AudioPlayer player2;
+AudioPlayer player3;
 player p = new player(115, 600 - 50, 50);
 platform pl = new platform(pl_x, pl_y, pl_d);
 platform pl2 = new platform(pl2_x, pl2_y, pl2_d);
@@ -40,10 +46,17 @@ void setup() {
   } else if (level == 4) {
     level4();
   }
+  minim = new Minim(this);
+  player = minim.loadFile("0477.wav");
+  player2 = minim.loadFile("Mario Coin.WAV");
+  player3 = minim.loadFile("Kalimba.mp3");
+  
+  player3.loop();
+  player3.play();
 }
 
 void draw() {
-
+  
   println(p.horAccel);
   //println(p.x, p.y);
 

@@ -65,6 +65,8 @@ class player {
       y = groundy - d;
       canJumpAgain = true;
       death = true;
+      player.play();
+      player.rewind();
     }
     if (death) {
       death();
@@ -117,14 +119,14 @@ class player {
       death = false;
       deathTime = 180;
       if (level == 1) {
-    level1();
-  } else if (level == 2) {
-    level2();
-  } else if (level == 3) {
-    level3();
-  } else if (level == 4) {
-    level4();
-  }
+        level1();
+      } else if (level == 2) {
+        level2();
+      } else if (level == 3) {
+        level3();
+      } else if (level == 4) {
+        level4();
+      }
     }
 
     if (level == 1 || level == 2) {

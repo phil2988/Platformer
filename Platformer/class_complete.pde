@@ -16,6 +16,8 @@ class complete {
     popStyle();
 
     if (p.y >= y - p.d && p.y <= y + d && p.x >= x - p.d && p.x <= x + d) {
+      player2.play();
+      player2.rewind();
       if (level == 1) {
         level2();
       } else if (level == 2) {
