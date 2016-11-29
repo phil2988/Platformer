@@ -122,3 +122,44 @@ void level4() {
   groundx2 = 1400;
   groundy2 = 700;
 }
+
+void level5() {
+  p.d = 25;
+  jumpPower = 5;
+  moveSpeed = 1.5;
+  p.gravity = 0.14;
+  level = 5;
+  c.x = 1000;
+  c.y = 350;
+  p.x = 100;
+  p.y = 600 - p.d;
+  p.gravityAccel = 0;
+  e.x = 1400;
+  e.d = 60;
+  e.y = 600 - e.d;
+  pl.x = 50;
+  pl.y = 600;
+  pl.x2 = 1300;
+  pl2.x = 0;
+  pl2.y = 0;
+  pl2.x2 = 0;
+  pl3.x = 0;
+  pl3.y = 0;
+  pl3.x2 = 0;
+  pl4.x = 0;
+  pl4.y =0;
+  pl4.x2 = 0;
+  pl5.x = 0;
+  pl5.y = 0;
+  pl5.x2 = 0;
+  pl6.x = 0;
+  pl6.y = 0;
+  pl6.x2 = 0;
+  pl7.x = 0;
+  pl7.y = 0;
+  pl7.x2 = 0;
+  groundx = 0;
+  groundy = 700;
+  groundx2 = 1400;
+  groundy2 = 700;
+}

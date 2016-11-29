@@ -12,14 +12,17 @@ float pl3_d = 780;
 
 int level = 1;
 
+PImage i1;
+PImage i2;
 Minim minim;
 AudioPlayer player;
 AudioPlayer player2;
 AudioPlayer player3;
-player p = new player(115, 600 - 50, 50);
-platform pl = new platform(pl_x, pl_y, pl_d);
-platform pl2 = new platform(pl2_x, pl2_y, pl2_d);
-platform pl3 = new platform(pl3_x, pl3_y, pl3_d);
+enemy e = new enemy(0, 0, 0);
+player p = new player(0, 0, 0);
+platform pl = new platform(0, 0, 0);
+platform pl2 = new platform(0, 0, 0);
+platform pl3 = new platform(0, 0, 0);
 platform pl4 = new platform(0, 0, 0);
 platform pl5 = new platform(0, 0, 0);
 platform pl6 = new platform(0, 0, 0);
@@ -33,6 +36,8 @@ float groundx2 = 1400;
 float groundy2 = 700;
 
 void setup() {
+  i1 = loadImage("Nom1.PNG");
+  i2 = loadImage("Nom2.PNG");
   fullScreen();
   //size(800, 800);
   color(HSB);
@@ -45,6 +50,8 @@ void setup() {
     level3();
   } else if (level == 4) {
     level4();
+  }else if (level == 5) {
+    level5();
   }
   minim = new Minim(this);
   player = minim.loadFile("0477.wav");
@@ -68,6 +75,7 @@ void draw() {
   //updates classes
   p.display();
   p.physics();
+  e.movement();
 
   pl.display();
   pl2.display();
