@@ -76,7 +76,6 @@ class player {
 
   //Called when death = true
   void death() {
-    level = 1;
     deathTime -= 1;
     pushStyle();
     textAlign(CENTER);
@@ -117,7 +116,15 @@ class player {
     if (deathTime == 0) {
       death = false;
       deathTime = 180;
-      level1();
+      if (level == 1) {
+    level1();
+  } else if (level == 2) {
+    level2();
+  } else if (level == 3) {
+    level3();
+  } else if (level == 4) {
+    level4();
+  }
     }
 
     if (level == 1 || level == 2) {

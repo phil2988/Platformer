@@ -30,6 +30,8 @@ void level2() {
   p.x = 115;
   p.y = 550;
   p.gravityAccel = 0;
+  c.x = 1000;
+  c.y = 300;
   pl.x = 100;
   pl.y = 600;
   pl.x2 = 250;
@@ -51,6 +53,7 @@ void level3() {
   moveSpeed = 1.5;
   p.gravity = 0.14;
   level = 3;
+  c.x = 1000;
   c.y = 350;
   p.x = 100;
   p.y = 600 - p.d;
@@ -88,6 +91,7 @@ void level4() {
   moveSpeed = 9;
   p.gravity = 0.14;
   level = 4;
+  c.x = 1000;
   c.y = 350;
   p.x = 100;
   p.y = 600 - p.d;
