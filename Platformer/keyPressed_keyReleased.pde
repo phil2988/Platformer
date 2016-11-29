@@ -1,3 +1,6 @@
+boolean dPress = false;
+boolean aPress = false;
+
 void keyPressed () {
   if (key == 'w') {
     if (p.canJumpAgain) {
@@ -7,25 +10,20 @@ void keyPressed () {
     }
   }
   if (key == 'd') {
-
-    p.horAccel = moveSpeed;
+    dPress = true;
   }
   if (key == 'a') {
-
-    p.horAccel = -moveSpeed;
+    aPress = true;
   }
 }
 
-void keyReleased() {
-
-  if (key == 'd') {
-    if (!keyPressed) {
-      p.horAccel = 0;
-    }
+void keyReleased(){
+  
+if (key == 'd') {
+    dPress = false;
   }
   if (key == 'a') {
-    if (!keyPressed) {
-      p.horAccel = 0;
-    }
+    aPress = false;
   }
+
 }

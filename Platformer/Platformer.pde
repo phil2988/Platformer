@@ -8,7 +8,7 @@ float pl3_x = 700;
 float pl3_y = 400;
 float pl3_d = 780;
 
-int level = 1;
+int level = 4;
 
 player p = new player(115, 600 - 50, 50);
 platform pl = new platform(pl_x, pl_y, pl_d);
@@ -40,11 +40,14 @@ void setup() {
   else if (level == 3){
     level3();
   }
+  else if (level == 4){
+    level4();
+  }
 }
 
 void draw() {
 
-
+    println(p.horAccel);
   //println(p.x, p.y);
 
   background(20, 65, 400);

@@ -23,6 +23,27 @@ class player {
 
     //Moves player to the sides when buttons are pressed
     x += horAccel;
+    
+    if (p.x <= 0){
+      p.x = 0;
+    }
+    
+    if (horAccel < -0.5){
+      horAccel += 0.6;
+    }
+    if (horAccel > 0.5){
+      horAccel -= 0.6;
+    }
+    if (horAccel > -0.55 && horAccel < 0.55){
+      horAccel = 0;
+    }
+    
+    if (aPress){
+     horAccel = -moveSpeed;
+    }
+    if (dPress){
+      horAccel = moveSpeed;
+    }
 
     //Physics fror when player is in the air
     if (inAir) {

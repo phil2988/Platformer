@@ -23,6 +23,9 @@ class complete {
         level3();
       }
       else if (level == 3){
+        level4();
+      }
+      else if (level == 4){
         p.win = true;
       }
     }

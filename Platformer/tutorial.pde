@@ -9,7 +9,7 @@ void tutorial(){
     text("Jump by pressing the w key", (pl.x + pl.x2)/2, pl.y - 120);
     
     if (p.x >= 300){
-      text("if you hit the ground, you die", (pl2.x + pl2.x2)/2, pl2.y - 150);
+      text("If you hit the ground, you die", (pl2.x + pl2.x2)/2, pl2.y - 150);
     }
     
     if (p.x >= 700){
@@ -19,7 +19,7 @@ void tutorial(){
   }
   if (level == 2){
     textAlign(CENTER);
-    text("if you hit a platform from the bottom", (pl.x + pl.x2)/2, pl.y - 150);
+    text("If you hit a platform from the bottom", (pl.x + pl.x2)/2, pl.y - 150);
     text("You can stil get onto it", (pl.x + pl.x2)/2, pl.y - 120);
     
     if (p.x >= 300){
